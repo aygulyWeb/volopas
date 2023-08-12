@@ -1,0 +1,138 @@
+@import "_var";
+@import "_fonts";
+@import "_mixins";
+
+.roadmap {
+	display: flex;
+	justify-content: space-between;
+	// padding-top: 80px;
+	&-wrap {
+		position: relative;
+		padding-top: 320px;
+		// margin-top: 50px;
+		padding-bottom: 300px;
+		background: url("../images/bg.png") no-repeat;
+		background-size: 100%;
+		// z-index: -8;
+	}
+	// &__image-bg {
+	// 	position: absolute;
+	// 	top: -16%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: -88;
+	// }
+	// 1-column
+	&__column:nth-child(1) {
+		padding-top: 28px;
+	}
+	&__timer {
+		padding-top: 103px;
+	}
+	&__right {
+		text-align: right;
+	}
+	&__item {
+		background-color: #fff;
+		max-width: 526px;
+		padding: 47px 47px 28px 40px;
+		margin-top: 90px;
+	}
+	&__title {
+		@include blockFontsfont(28px, $headertitlefont, $roadmapTitlecolor, none);
+	}
+	&__hover {
+		color: $roadmapTitlehoverColor;
+	}
+	&__text {
+		padding-top: 21px;
+		line-height: 1.5;
+		@include blockFontsfont(15px, $productSubfont, $roadmapTextcolor, none);
+	}
+	&__btn {
+		padding-top: 33px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		@include blockFontsfont(15px, $productSubfont, $roadmapReadmorecolor, capitalize);
+	}
+	.fa-location-arrow {
+		transform: rotate(135deg);
+		color: $roadmapArrowcolor;
+	}
+	&__time {
+		@include blockFontsfont(18px, $headertitlefont, $roadmapTimecolor, none);
+		display: block;
+	}
+	&__num {
+		@include blockFontsfont(15px, $headertitlefont, $roadmapNumcolor, none);
+	}
+	&__rubic {
+		@include blockFontsfont(15px, $productSubfont, $roadmapReadmorecolor, capitalize);
+	}
+	#more1 {
+		display: none;
+	}
+	#more2 {
+		display: none;
+	}
+	#more3 {
+		display: none;
+	}
+	#more4 {
+		display: none;
+	}
+	#more5 {
+		display: none;
+	}
+
+	// 2-column
+
+	// &__timer-finish {
+	// 	padding-left: 150px;
+	// }
+	&__picture {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__subject {
+		@include blockFontsfont(28px, $headertitlefont, $roadmapTitlehoverColor, none);
+	}
+	&__number {
+		@include blockFontsfont(28px, $headertitlefont, $roadmapTimecolor, none);
+	}
+
+	&__days {
+		display: inline-block;
+		line-height: 1.5;
+		@include blockFontsfont(18px, $headertitlefont, $roadmapDayscolor, none);
+	}
+	&__finish {
+		padding-left: 23px;
+		display: inline-block;
+		position: relative;
+		@include blockFontsfont(18px, $productSubfont, $roadmapReadmorecolor, capitalize);
+		&::before {
+			content: "";
+			display: block;
+			border-right: 2px solid #5e6061;
+			height: 43px;
+			position: absolute;
+			top: 0;
+			left: 2%;
+		}
+	}
+	#more6 {
+		display: none;
+	}
+	#more7 {
+		display: none;
+	}
+	#more8 {
+		display: none;
+	}
+	#more9 {
+		display: none;
+	}
+}

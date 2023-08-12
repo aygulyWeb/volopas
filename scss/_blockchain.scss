@@ -1,0 +1,44 @@
+@import "_var";
+@import "_fonts";
+@import "_mixins";
+
+.blockchain {
+	// padding-top: 110px;
+	padding-bottom: 136px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&-wrap {
+		position: relative;
+		padding-top: 100px;
+		background: url("../images/blockchain-bg.png") no-repeat;
+		background-size: 100%;
+		z-index: -99;
+	}
+	// &__image-bg {
+	// 	position: absolute;
+	// 	top: 0%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: -99;
+	// }
+	&__item {
+		margin-top: 32px;
+		flex: 0 0 32%;
+		background-color: #fff;
+		box-shadow: 0 0 10px #ccc;
+		border-radius: 5px;
+		text-align: center;
+		padding: 29px 40px;
+	}
+	&__title {
+		padding-top: 20px;
+		display: block;
+		@include blockFontsfont(28px, $headertitlefont, $blockchainTitlecolor, capitalize);
+	}
+	&__text {
+		padding-top: 20px;
+		line-height: 1.5;
+		@include blockFontsfont(15px, $productSubfont, $roadmapTextcolor, none);
+	}
+}

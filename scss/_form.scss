@@ -1,0 +1,63 @@
+@import "_var";
+@import "_fonts";
+@import "_mixins";
+
+.form {
+	padding-top: 117px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__content {
+		max-width: 674px;
+		margin-top: 81px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	input {
+		background: transparent;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #c9c9c9;
+		padding-bottom: 21px;
+	}
+	input[placeholder] {
+		@include blockFontsfont(15px, $headertitlefont, $faqtitlecolor, capitalize);
+	}
+	::-webkit-input-placeholder {
+		@include blockFontsfont(15px, $headertitlefont, $faqIconcolor, capitalize);
+	}
+
+	&__name {
+		flex-basis: 45%;
+	}
+	&__mail {
+		flex-basis: 45%;
+	}
+	&__msg {
+		margin-top: 84px;
+		flex: 1 0 100%;
+	}
+	&__btn {
+		cursor: pointer;
+		border: none;
+		background: linear-gradient(90deg, rgba(245, 63, 99, 1) 37%, rgb(218, 104, 89) 63%);
+		border-radius: 25px;
+		box-shadow: 0 0 10px rgba(245, 63, 99, 1);
+		@include blockFontsfont(15px, $headertitlefont, #fff, capitalize);
+		margin-top: 48px;
+		margin-left: auto;
+		padding: 17px 50px;
+		position: relative;
+		&:before {
+			display: block;
+			content: "\f04b";
+			font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+			font-weight: 900;
+			font-size: 12px;
+			position: absolute;
+			top: 40%;
+			left: 80%;
+		}
+	}
+}

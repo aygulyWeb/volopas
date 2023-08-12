@@ -1,0 +1,23 @@
+@import "_var";
+@import "_fonts";
+@import "_mixins";
+
+.partners {
+	padding-top: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__title {
+		// display: block;
+		@include blockFontsfont(20px, $partnersTitlefont, $partnersTitlecolor, capitalize);
+	}
+	img {
+		cursor: pointer;
+	}
+	img:nth-of-type(5) {
+		filter: grayscale(100%);
+	}
+	img:nth-of-type(5):hover {
+		filter: grayscale(0%);
+	}
+}

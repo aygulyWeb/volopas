@@ -1,0 +1,79 @@
+@import "_var";
+@import "_fonts";
+@import "_mixins";
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 131px;
+	&-wrap {
+		margin-top: 106px;
+		background: url("../images/footer-bg.png") no-repeat;
+		background-size: 100%;
+	}
+	&__title {
+		display: block;
+		@include blockFontsfont(15px, $productSubfont, $footerTitlecolor, capitalize);
+	}
+	&__link {
+		line-height: 1.5;
+		@include blockFontsfont(18px, $productSubfont, $blockTextwhiteColor, none);
+	}
+	&__mail {
+		padding-top: 28px;
+	}
+	&__net {
+		display: inline-flex;
+		border: 1px solid $footerLinecolor;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		margin-right: 8px;
+		margin-top: 33px;
+
+		i {
+			color: $footerSocialscolor;
+		}
+	}
+	&__btn {
+		@include blockFontsfont(15px, $headertitlefont, $blockTextwhiteColor, capitalize);
+		border: 2px solid rgba(245, 63, 99, 1);
+		border-radius: 25px;
+		border-image-slice: 1;
+		background-image: radial-gradient(90deg, rgba(245, 63, 99, 1) 47%, rgb(218, 104, 89) 63%);
+		padding: 15px 46px;
+		margin-left: 28px;
+	}
+	&__form {
+		padding-top: 50px;
+	}
+	form {
+		text-align: right;
+		padding-bottom: 70px;
+	}
+	input {
+		background: transparent;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #c9c9c9;
+		padding-bottom: 16px;
+		width: 238px;
+	}
+	input[placeholder] {
+		@include blockFontsfont(15px, $headertitlefont, $faqtitlecolor, capitalize);
+	}
+	::-webkit-input-placeholder {
+		@include blockFontsfont(15px, $headertitlefont, #a9a9b0, capitalize);
+	}
+	&__copr {
+		padding-top: 40px;
+		padding-bottom: 34px;
+		text-align: right;
+		@include blockFontsfont(15px, $headertitlefont, #a9a9b0, capitalize);
+	}
+	.header__link {
+		color: #a9a9b0;
+	}
+}

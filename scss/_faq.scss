@@ -1,0 +1,59 @@
+@import "_var";
+@import "_fonts";
+@import "_mixins";
+
+.faq {
+	min-height: 600px;
+
+	&__accordeon {
+		padding-top: 70px;
+	}
+	&__accordeon-item {
+		display: block;
+	}
+	&__toggle {
+		display: flex;
+		justify-content: space-between;
+		background-color: #fff;
+		box-shadow: 0 2px 5px #ccc;
+		padding: 18px 52px;
+		cursor: pointer;
+	}
+	&__title {
+		@include blockFontsfont(18px, $headertitlefont, $faqtitlecolor, none);
+	}
+	.fa-plus {
+		color: $faqIconcolor;
+	}
+	&__text {
+		padding-top: 48px;
+		line-height: 1.5;
+		@include blockFontsfont(15px, $productSubfont, $faqtitlecolor, none);
+	}
+	&__input {
+		display: none;
+	}
+	&__content {
+		border-left: 2px solid #2fe097;
+		margin-top: 15px;
+		margin-left: 57px;
+		padding-left: 40px;
+		margin-bottom: 28px;
+		visibility: hidden;
+		opacity: 0;
+		height: 0px;
+		transition: height 0.5s linear;
+	}
+	&__input:checked ~ .faq__content {
+		height: 245px;
+		opacity: 1;
+		visibility: visible;
+		transition: height 0.3s ease-in-out;
+	}
+	&__input:checked ~ .faq__toggle {
+		box-shadow: 0 5px 10px #ccc;
+	}
+	&__input:checked ~ .faq__toggle .fa-plus {
+		transform: rotate(45deg);
+	}
+}
